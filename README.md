@@ -1,54 +1,41 @@
-# React + TypeScript + Vite
+# Flowly - Modern SaaS Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Flowly is a modern and interactive landing page designed for a fictional SaaS product. It features a clean design, smooth animations, and dynamic content fetched from an API. Built with **React**, **TypeScript**, and **Tailwind CSS**, this project showcases best practices in frontend development.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Hero Section**: A visually appealing hero section with a gradient background, headline, subheading, and a call-to-action button.
+- **Features Section**: Displays key product features with icons and descriptions.
+- **Testimonials Section**: Dynamically fetches user testimonials from an API and displays them with a random rating.
+- **Pricing Section**: Shows three pricing tiers, highlighting the recommended plan.
+- **Contact Section**: A simple contact form with basic validation.
+- **Footer**: Includes links to social media and company details.
+- **Responsive Design**: Fully responsive layout with a mobile-first approach.
+- **Animations**: Smooth animations using **Framer Motion** for an enhanced user experience.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/santigalardi/flowly-frontend.git
+cd flowly-frontend
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
 ```
+
+### 3. Run in development mode
+
+```bash
+npm run dev
+```
+
+The server will start at `http://localhost:5173/` by default.
